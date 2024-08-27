@@ -7,12 +7,12 @@ console.log(test)
 //! Temp Convertor Website:
 //? 1. Project Setup
 //TODO Folder Organization: Create a new project folder and include the following files:
-//TODO index.html for the HTML structure.
-//TODO styles.css for any custom styles.
-//TODO app.js for the JavaScript code.
+//TODO index.html for the HTML structure. (check)
+//TODO styles.css for any custom styles. (check)
+//TODO app.js for the JavaScript code. (check)
 
 //? 2. HTML Structure
-//TODO Title: Create a title and a header for your temperature converter page.
+//TODO Title: Create a title and a header for your temperature converter page. (check)
 //*TODO Input Fields:
 //* Add an input field where users can enter a temperature value.
 //* Include dropdown menus for selecting the temperature units (e.g., Celsius, Fahrenheit, Kelvin) for both the original and target units.
@@ -38,3 +38,4 @@ console.log(test)
 
 
 */
+
