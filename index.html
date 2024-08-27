@@ -8,10 +8,32 @@
     <title>Temp Converter Website</title>
 </head>
 <body>
-    <header>
-        <h1>hello world</h1>     
-    </header>
+    <div class="All-In-One container"> <!--All-In-One START-->
+        <div class="row"> <!--All-In-One row START -->
+            <header>
+                <h1>Temperature Converter</h1>   
+            </header> <!--Header END-->
+            <main>
+                <div class="InputArea container">
+                    <div class="row">
+                        <div class = "numberSection ">
+                            <input type="number" name="tempnumber" id="tempinput">
+                        </div>    
+                        <div class="dropdown">           
+                            <label for="UnitOptions">Pick a unit</label>
+                                <select name="UnitOptions" id="DropDownUnits">
+                                    <option value="Celsius">C</option>
+                                    <option value="Fahrenheit">F</option>
+                                    <option value="Kelvin">K</option>
+                                </select>
+                        </div>
+                    </div> 
+                </div>
+            </main>
+        </div> <!--All-In-One row END -->
+    </div> <!--All-In-One container END-->
 </body>
+    
 <script type="text/javascript" src = "app.js"></script>
 </html>
 
