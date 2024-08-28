@@ -22,13 +22,36 @@
                         <div class="dropdown">           
                             <label for="UnitOptions">Pick a unit</label>
                                 <select name="UnitOptions" id="DropDownUnits">
-                                    <option value="Celsius">C</option>
-                                    <option value="Fahrenheit">F</option>
-                                    <option value="Kelvin">K</option>
+                                    <option value="celsius">°C</option>
+                                    <option value="fahrenheit">°F</option>
+                                    <option value="kelvin">°K</option>
                                 </select>
                         </div>
+                        <div class="buttons">
+                            <button type="button" id="submitbutton">Submit</button>
+                            <button type="button" id="resetbutton">Reset</button>
+                        </div>
                     </div> 
-                </div>
+                </div> <!-- InputArea END-->
+                <div class="Results container"> <!-- Results container START-->
+                    <div class="row">
+                        <div class="Celsius">
+                            <h3>Celsius</h3>
+                            <input type="number" name="CelsiusNum" id="CelsiusNum">
+                            <input type="range" name="CelsiusScale" id="CelsiusScale">
+                        </div>
+                        <div class="Fahrenheit">
+                            <h3>Fahrenheit</h3>
+                            <input type="number" name="FahrNum" id="FahrNum">
+                            <input type="range" name="FahrScale" id="FahrScale">
+                        </div>
+                        <div class="Kelvin">
+                            <h3>Kelvin</h3>
+                            <input type="number" name="KelvNum" id="KelvNum">
+                            <input type="range" name="KelvScale" id="KelvScale">
+                        </div>
+                    </div>
+                </div> <!--Results container END-->
             </main>
         </div> <!--All-In-One row END -->
     </div> <!--All-In-One container END-->

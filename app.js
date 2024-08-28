@@ -1,7 +1,62 @@
-let test = "connection test passed"
-console.log(test)
+//CONVERSION SECTION START #region
+/*
+// Asign values to variables 
+let Celsius = ["Celsius" , "°C", "", Number]
+let Fahrenheit = ["Fahrenheit", "°F" , "", Number]
+let Kelvin = ["Kelvin", "°K", "", Number]
 
+let CelsiusConversions = [((Fahrenheit - 32)/1.8), (Kelvin - 273.15)]
+let FahrenheitConversions = [ ((Celsius * 1.8) + 32), ((Kelvin * 1.8) - 459.67)]
+let KelvinConversions = [ (Celsius + 273.15) , ((Fahrenheit + 459.67) / 1.8)]
 
+const CelsiusInput = document.getElementById("CelsiusNum");
+const FahrInput = document.getElementById("FahrNum");
+const KelvInput = document.getElementById("KelvNum");
+*/
+
+// input area contianer id =tempinput
+//  id =DropDownUnits
+
+//input section 
+let inputSect = document.getElementById("tempinput");
+
+let dropUnits = document.getElementById("DropDownUnits");
+
+//VARIABLE VALUES section START
+let celsiusID = document.getElementById("CelsiusNum")
+
+let fahrID = document.getElementById("FahrNum")
+
+let kelvID = document.getElementById("KelvNum")
+// VARIABLE VALUES section END 
+
+//RESET BUTTON section START
+const resetID = document.getElementById("resetbutton")
+resetID.addEventListener("click", () => {
+    inputSect.value = "";
+    celsiusID.value = "";
+    fahrID.value = "";
+    kelvID.value = "";
+})
+//RESET BUTTON section END 
+
+//SUBMIT BUTTON section START
+const submitID = document.getElementById("submitbutton")
+submitID.addEventListener("click", () => {
+    console.log(celsiusID)
+    if (dropUnits.value == "celsius"){
+        fahrID.value = ((inputSect.value * 1.8) + 32)
+        //kelvID.value = (celsiusID + 273.15)
+    } else{
+        console.log("cry")
+    }
+})
+// SUBMIT BUTTON section END 
+/*
+let CelsiusConversions = [((Fahrenheit - 32)/1.8), (Kelvin - 273.15)]
+let FahrenheitConversions = [ ((Celsius * 1.8) + 32), ((Kelvin * 1.8) - 459.67)]
+let KelvinConversions = [ (Celsius + 273.15) , ((Fahrenheit + 459.67) / 1.8)]
+*/
 
 /*
 //! Temp Convertor Website:
