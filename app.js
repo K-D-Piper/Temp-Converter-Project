@@ -17,38 +17,57 @@ const KelvInput = document.getElementById("KelvNum");
 // input area contianer id =tempinput
 //  id =DropDownUnits
 
-//input section 
+//input section START #region
 let inputSect = document.getElementById("tempinput");
 
-let dropUnits = document.getElementById("DropDownUnits");
+let dropUnits = document.getElementById("dropDownUnits");
+//input section END #regionend
 
-//VARIABLE VALUES section START
-let celsiusID = document.getElementById("CelsiusNum")
+//VARIABLE VALUES section START #region
+let celsiusID = document.getElementById("celsiusNum")
 
-let fahrID = document.getElementById("FahrNum")
+let fahrID = document.getElementById("fahrNum")
 
-let kelvID = document.getElementById("KelvNum")
-// VARIABLE VALUES section END 
+let kelvID = document.getElementById("kelvNum")
+// VARIABLE VALUES section END #regionend
 
-//RESET BUTTON section START
+//RESET BUTTON section START #region
 const resetID = document.getElementById("resetbutton")
+
 resetID.addEventListener("click", () => {
     inputSect.value = "";
     celsiusID.value = "";
     fahrID.value = "";
     kelvID.value = "";
 })
-//RESET BUTTON section END 
+//RESET BUTTON section END #regionend
 
 //SUBMIT BUTTON section START
-const submitID = document.getElementById("submitbutton")
-submitID.addEventListener("click", () => {
-    console.log(celsiusID)
-    if (dropUnits.value == "celsius"){
-        fahrID.value = ((inputSect.value * 1.8) + 32)
-        //kelvID.value = (celsiusID + 273.15)
-    } else{
-        console.log("cry")
+const submitID = document.getElementById("submitbutton") 
+
+submitID.addEventListener("click" , () => 
+{
+    switch(true)
+    {
+        case(dropUnits.value === "celsius"):
+            celsiusID.value = inputSect.value
+            fahrID.value = ((inputSect.value * 1.8) + 32)
+            kelvID.value = (inputSect.value + 273.15)
+    break;
+        case (dropUnits.value === "fahrenheit"):
+            fahrID.value = inputSect.value
+            celsiusID.value = ((inputSect.value - 32)/1.8)
+            kelvID.value =  ((inputSect.value + 459.67) / 1.8)
+    break;
+        case (dropUnits.value === "kelvin"):
+            kelvID.value = inputSect.value
+            celsiusID.value =  (inputSect.value - 273.15)
+            fahrID.value = ((inputSect.value * 1.8) - 459.67)
+    break;
+        default:
+            celsiusID.value = "error"
+            fahrID.value = "error"
+            kelvID.value = "error"
     }
 })
 // SUBMIT BUTTON section END 
@@ -69,10 +88,10 @@ let KelvinConversions = [ (Celsius + 273.15) , ((Fahrenheit + 459.67) / 1.8)]
 //? 2. HTML Structure
 //TODO Title: Create a title and a header for your temperature converter page. (check)
 //*TODO Input Fields:
-//* Add an input field where users can enter a temperature value.
-//* Include dropdown menus for selecting the temperature units (e.g., Celsius, Fahrenheit, Kelvin) for both the original and target units.
-//* Buttons: Add a button that will trigger the conversion process.
-//* Result Display: Include an area on the page where the conversion result will be displayed.
+//* Add an input field where users can enter a temperature value. (check)
+//* Include dropdown menus for selecting the temperature units (e.g., Celsius, Fahrenheit, Kelvin) for both the original and target units. (No.)
+//* Buttons: Add a button that will trigger the conversion process. (check)
+//* Result Display: Include an area on the page where the conversion result will be displayed. (check)
 //? 3. Styling with Bootstrap
 //* Responsive Design: Use Bootstrap's grid system to make your layout responsive.
 //* Form Styling: Apply Bootstrap classes to style your input fields, dropdowns, and buttons.
